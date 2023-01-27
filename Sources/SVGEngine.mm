@@ -524,14 +524,12 @@ CF_RETURNS_RETAINED CGMutablePathRef pathDefinitionParser::parse()
     _path = CGPathCreateMutable();
 
     NSScanner * const scanner = [NSScanner scannerWithString:_definition];
-    static NSCharacterSet *separators, *commands;
+    static NSCharacterSet *commands;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         commands   = [NSCharacterSet characterSetWithCharactersInString:kValidSVGCommands];
-        separators = [NSMutableCharacterSet characterSetWithCharactersInString:@","];
-        [(NSMutableCharacterSet *)separators formUnionWithCharacterSet:NSCharacterSet.whitespaceAndNewlineCharacterSet];
     });
-    scanner.charactersToBeSkipped = separators;
+    scanner.charactersToBeSkipped = NSCharacterSet.whitespaceAndNewlineCharacterSet;
 
     NSString *cmdBuf;
     while([scanner scanCharactersFromSet:commands intoString:&cmdBuf]) {
@@ -542,6 +540,15 @@ CF_RETURNS_RETAINED CGMutablePathRef pathDefinitionParser::parse()
             while (!scanner.isAtEnd) {
                 NSUInteger zeros = 0;
                 while ([scanner scanString:@"0" intoString:NULL]) { ++zeros; }
+                
+                while ([scanner scanString:@"," intoString:NULL]) {
+                    if (zeros > 0) {
+                        for (NSUInteger i = 0; i < zeros; ++i) {
+                            --zeros;
+                            _operands.push_back(0.0);
+                        }
+                    }
+                }
                 // Start of a 0.x ?
                 if (zeros > 0 && [scanner scanString:@"." intoString:NULL]) {
                     --zeros;
@@ -600,7 +607,7 @@ CF_RETURNS_RETAINED CGMutablePathRef pathDefinitionParser::parse()
                 break;
         }
     }
-    if(scanner.scanLocation < [_definition length])
+    if (scanner.scanLocation < [_definition length])
         NSLog(@"*** SVG parse error at index: %d: '%c'",
               (int)scanner.scanLocation, [_definition characterAtIndex:scanner.scanLocation]);
 
