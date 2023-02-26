@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1737277029ABDEA600750D7E /* companyLogo.svg in Resources */ = {isa = PBXBuildFile; fileRef = 1737276F29ABDEA600750D7E /* companyLogo.svg */; };
+		1737277229ABE15500750D7E /* SVGAnimatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1737277129ABE15500750D7E /* SVGAnimatorView.swift */; };
+		1737277429ABE17C00750D7E /* SVGAnimatorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1737277329ABE17C00750D7E /* SVGAnimatorExtensions.swift */; };
+		179BF15B2983FCBC00FCA9EA /* SVGAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179BF15A2983FCBC00FCA9EA /* SVGAnimator.swift */; };
 		1DC60E4E1E2BAA200044BFD3 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DC60E4C1E2BAA200044BFD3 /* Launch Screen.storyboard */; };
 		831FCA202449CAA60075CF58 /* PocketSVG in Frameworks */ = {isa = PBXBuildFile; productRef = 831FCA1F2449CAA60075CF58 /* PocketSVG */; };
 		83DFDE032449D0B30050D6FC /* PocketSVG in Frameworks */ = {isa = PBXBuildFile; productRef = 83DFDE022449D0B30050D6FC /* PocketSVG */; };
@@ -43,6 +47,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1737276F29ABDEA600750D7E /* companyLogo.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = companyLogo.svg; sourceTree = "<group>"; };
+		1737277129ABE15500750D7E /* SVGAnimatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGAnimatorView.swift; sourceTree = "<group>"; };
+		1737277329ABE17C00750D7E /* SVGAnimatorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGAnimatorExtensions.swift; sourceTree = "<group>"; };
+		179BF15A2983FCBC00FCA9EA /* SVGAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGAnimator.swift; sourceTree = "<group>"; };
 		1DC60E471E2BA1170044BFD3 /* PocketSVG.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PocketSVG.framework; path = "../../build/Debug-iphoneos/PocketSVG.framework"; sourceTree = "<group>"; };
 		1DC60E4D1E2BAA200044BFD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		831FCA1B2449CA240075CF58 /* PocketSVG */ = {isa = PBXFileReference; lastKnownFileType = folder; name = PocketSVG; path = ../..; sourceTree = "<group>"; };
@@ -89,6 +97,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1737276C29ABCEA700750D7E /* SVGAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				179BF15A2983FCBC00FCA9EA /* SVGAnimator.swift */,
+				1737277129ABE15500750D7E /* SVGAnimatorView.swift */,
+				1737277329ABE17C00750D7E /* SVGAnimatorExtensions.swift */,
+			);
+			path = SVGAnimation;
+			sourceTree = "<group>";
+		};
 		1DC60E461E2BA1170044BFD3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				831FCA1B2449CA240075CF58 /* PocketSVG */,
+				1737276C29ABCEA700750D7E /* SVGAnimation */,
 				B0B5920C207508E30009ECA2 /* Sample SVG Files */,
 				B09D90981D6C5E2E00360396 /* Demo-iOS */,
 				83DFDDF82449D0730050D6FC /* PocketSVGTests */,
@@ -149,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				9E150AAA227A27B600B79D9C /* attribute_inheritance.svg */,
+				1737276F29ABDEA600750D7E /* companyLogo.svg */,
 				B0B5920D207508E30009ECA2 /* circle.svg */,
 				B0B5920E207508E30009ECA2 /* curve.svg */,
 				B0B5920F207508E30009ECA2 /* iceland.svg */,
@@ -260,6 +280,7 @@
 				B0B59245207532CC0009ECA2 /* rectangle.svg in Resources */,
 				B0B59214207508E30009ECA2 /* iceland.svg in Resources */,
 				9E49FC67223E7A7800686CCD /* lines.svg in Resources */,
+				1737277029ABDEA600750D7E /* companyLogo.svg in Resources */,
 				B0B59213207508E30009ECA2 /* curve.svg in Resources */,
 				B0B59243207532C60009ECA2 /* tiger.svg in Resources */,
 				B09D90A11D6C5E2E00360396 /* Assets.xcassets in Resources */,
@@ -289,6 +310,9 @@
 				B0B59221207514970009ECA2 /* IcelandicViewController.swift in Sources */,
 				B0B5922320751E760009ECA2 /* GrayscaleTigerViewController.swift in Sources */,
 				B0B592052074F7B80009ECA2 /* MainViewController.swift in Sources */,
+				179BF15B2983FCBC00FCA9EA /* SVGAnimator.swift in Sources */,
+				1737277229ABE15500750D7E /* SVGAnimatorView.swift in Sources */,
+				1737277429ABE17C00750D7E /* SVGAnimatorExtensions.swift in Sources */,
 				B09D909A1D6C5E2E00360396 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,13 +499,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4P339P74SQ;
 				INFOPLIST_FILE = "Demo-iOS/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "SVG Animation";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "PocketSVG.Demo-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "PocketSVGAnimation.Demo-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
@@ -492,13 +518,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4P339P74SQ;
 				INFOPLIST_FILE = "Demo-iOS/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "SVG Animation";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "PocketSVG.Demo-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "PocketSVGAnimation.Demo-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;

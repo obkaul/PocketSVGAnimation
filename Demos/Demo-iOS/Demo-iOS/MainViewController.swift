@@ -12,7 +12,7 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "PocketSVG Demo"
+        title = "PocketSVGAnimation Demo"
 
         let tableView = UITableView(frame: view.bounds, style: .grouped)
         tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -29,7 +29,7 @@ enum Section: Int {
     var title: String {
         switch self {
         case .simple:
-            return "Simple"
+            return "Simple (Animated)"
         case .complex:
             return "Complex"
         }
@@ -46,9 +46,10 @@ enum SimpleRow: Int {
     case attribute_inheritance
     case iceland
     case tiger
+    case companyLogo
 
     static var count: Int {
-        return 4
+        return 7
     }
 
     var svgURL: URL {
@@ -65,6 +66,8 @@ enum SimpleRow: Int {
             return Bundle.main.url(forResource: "iceland", withExtension: "svg")!
         case .tiger:
             return Bundle.main.url(forResource: "tiger", withExtension: "svg")!
+        case .companyLogo:
+            return Bundle.main.url(forResource: "companyLogo", withExtension: "svg")!
         }
     }
 
@@ -82,6 +85,8 @@ enum SimpleRow: Int {
             return "Iceland"
         case .tiger:
             return "Tiger"
+        case .companyLogo:
+            return "Sample Company Logo"
         }
     }
 }
