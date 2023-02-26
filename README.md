@@ -4,14 +4,13 @@ A simple toolkit for animating SVGs based on their paths using PocketSVG in the 
 
 Here are two quick videos demonstrating what kind of animations can be generated.
 
-## A sample company logo. Imagine your own companies logo animated like this in an iOS app! :)
+## A sample company logo. Imagine your own company logo animated like this in an iOS app! :)
 
-https://user-images.githubusercontent.com/77676833/221431183-d3a44b0a-45e9-404c-973c-c3fa37a27dfb.mov
-
+![companyLogo](https://user-images.githubusercontent.com/77676833/221433109-c647bc7a-4960-4f5f-b9eb-752539ac6fd8.gif)
 
 ## The sample tiger from PocketSVG:
 
-https://user-images.githubusercontent.com/77676833/221431185-f4040517-8496-4908-b2f9-6b40313b55bc.mov
+![tiger](https://user-images.githubusercontent.com/77676833/221433122-2e5e0746-52d0-4549-b4ee-aaf651d33d1f.gif)
 
 
 ## Adding an animated SVG logo
